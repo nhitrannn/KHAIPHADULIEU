@@ -126,7 +126,8 @@ public class xuatnhap extends javax.swing.JFrame {
         // TODO add your handling code here:
         String result = txtHoten.getText();
         int a = Integer.parseInt(txtSonguyen.getText());
-        
+        double b= Double.parseDouble(txtSothuc.getText());
+        result = result + "; so nguyen =" + a +"; so thuc = " + b;
         
     }//GEN-LAST:event_butnhapActionPerformed
 
@@ -177,3 +178,7 @@ public class xuatnhap extends javax.swing.JFrame {
     private javax.swing.JScrollPane txtketqua;
     // End of variables declaration//GEN-END:variables
 }
+
+
+
+
