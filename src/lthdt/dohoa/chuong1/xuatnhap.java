@@ -27,6 +27,7 @@ public class xuatnhap extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         txtHoten = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -34,26 +35,33 @@ public class xuatnhap extends javax.swing.JFrame {
         hhkjhj = new javax.swing.JLabel();
         txtSothuc = new javax.swing.JTextField();
         butnhap = new javax.swing.JButton();
-        txtketqua = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane = new javax.swing.JScrollPane();
+        txtKetQua = new javax.swing.JTextArea();
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("nhap du lieu");
 
         jLabel1.setText("Nhap Ho ten");
 
-        txtHoten.setText("jTextField1");
-
         jLabel2.setText("So Nguyen");
 
         txtSonguyen.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtSonguyen.setText("jTextField1");
 
         hhkjhj.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         hhkjhj.setText("So Thuc");
 
         txtSothuc.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtSothuc.setText("jTextField1");
 
         butnhap.setText("Nhap");
         butnhap.addActionListener(new java.awt.event.ActionListener() {
@@ -62,9 +70,9 @@ public class xuatnhap extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        txtketqua.setViewportView(jTextArea1);
+        txtKetQua.setColumns(20);
+        txtKetQua.setRows(5);
+        jScrollPane.setViewportView(txtKetQua);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,7 +82,7 @@ public class xuatnhap extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtketqua)
+                        .addComponent(jScrollPane)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +123,7 @@ public class xuatnhap extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(butnhap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(28, 28, 28)
-                .addComponent(txtketqua, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                .addComponent(jScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -128,7 +136,7 @@ public class xuatnhap extends javax.swing.JFrame {
         int a = Integer.parseInt(txtSonguyen.getText());
         double b= Double.parseDouble(txtSothuc.getText());
         result = result + "; so nguyen =" + a +"; so thuc = " + b;
-        
+        txtKetQua.append(result);
     }//GEN-LAST:event_butnhapActionPerformed
 
     /**
@@ -169,13 +177,14 @@ public class xuatnhap extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton butnhap;
     private javax.swing.JLabel hhkjhj;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JTextField txtHoten;
+    private javax.swing.JTextArea txtKetQua;
     private javax.swing.JTextField txtSonguyen;
     private javax.swing.JTextField txtSothuc;
-    private javax.swing.JScrollPane txtketqua;
     // End of variables declaration//GEN-END:variables
 }
 

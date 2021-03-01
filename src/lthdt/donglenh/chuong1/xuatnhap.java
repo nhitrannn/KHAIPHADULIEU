@@ -38,7 +38,10 @@ public class xuatnhap {
         c= Double.parseDouble(input);
         System.out.println("So thuc ban da nhap la: " + c);
         
+        
+        
     }
+    
 //</editor-fold>
 
             
