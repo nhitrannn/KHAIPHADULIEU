@@ -39,6 +39,7 @@ public class bai6 {
         sinhvien.setTruonghoc("Kinh te Hue");
         System.out.println(sinhvien.getHoten() + "; gioi tinh " + sinhvien.getGioitinh() + 
                 "; ngay  sinh " + df.format(sinhvien.getNgaysinh()) +  "; " + sinhvien.getTruonghoc());
+        System.out.println(sinhvien.calcTax(1200));
         
         Worker congnhan = new Worker();
         congnhan.setHoten("Tran Tuyet Nhi ");
@@ -49,6 +50,7 @@ public class bai6 {
                 congnhan.getGioitinh() + "; ngay sinh: " +
                 df.format(congnhan.getNgaysinh()) + "; cong ty: " +
                 congnhan.getCongty());
+        System.out.println(congnhan.calcTax(2000));
                 
         
                    

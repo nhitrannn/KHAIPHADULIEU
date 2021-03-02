@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Administrator
  */
-public class Worker extends Person {
+public class Worker extends Person implements TaxInterface {
     private String congty;
 
     public Worker() {
@@ -32,6 +32,11 @@ public class Worker extends Person {
 
     String setCongty() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double calcTax(double income) {
+        return (0.04*income);
     }
     
     

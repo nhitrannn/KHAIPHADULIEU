@@ -146,9 +146,8 @@ public class CRJFrame extends javax.swing.JFrame {
                 Integer.parseInt(txtuppery.getText()),
                 Integer.parseInt(txtlowerx.getText()),
                 Integer.parseInt(txtlowery.getText()));
-        String result  = "Dien tich cua hinh chu nhat " + hcn.calcArea();
-        result += " ;chu vi " + hcn.calcPerimeter();
-        txtKetqua.append(result);
+        
+        txtKetqua.append(hcn.toString());
     }//GEN-LAST:event_btnTinhActionPerformed
 
     /**

@@ -9,7 +9,7 @@ package lthdt.donglenh.chuong1;
  *
  * @author Administrator
  */
-public class Circle {
+public class Circle extends Shape {
     private int radius;
     private int x,y;
 
@@ -46,13 +46,22 @@ public class Circle {
         this.y = y;
     }
     
+    @Override
     public double  calcPerimeter() {
         double result = 2*Math.PI*this.radius;
         return result;
     }
+    @Override
     public double calcArea(){
         double result = Math.PI*this.radius*this.radius;
         return result;
     }
+
+    @Override
+    public String toString() {
+         String output = "chu vi hinh tron la: " + calcPerimeter() + "; dien tich la " + calcArea();
+        return output;
+    }
+    
     
 }

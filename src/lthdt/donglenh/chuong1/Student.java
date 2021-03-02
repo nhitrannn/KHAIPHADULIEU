@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Administrator
  */
-public class Student extends Person {
+public class Student extends Person implements TaxInterface  {
     private String truonghoc;
 
     public Student() {
@@ -31,6 +31,13 @@ public class Student extends Person {
 
     public void getTruonghoc(String text) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double calcTax(double income) {
+        double tax;
+        tax = 0.01*income;
+        return tax;
     }
     
     
