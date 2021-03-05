@@ -36,8 +36,8 @@ public class Wekapro {
 //    }
 
         myknowledgemodel model = new myknowledgemodel( "C:\\Program Files\\Weka-3-8-5\\data\\iris.arff", null, null);
-        model.trainset = model.divideTrainTestR(model.dataset, 80, false);
-        model.testset = model.divideTrainTestR(model.dataset, 80, true);
+        model.trainset = model.divideTrainTestR(model.dataset, 70, false);
+        model.testset = model.divideTrainTestR(model.dataset, 70, true);
         System.out.println(model);
         System.out.println(model.trainset.toSummaryString());
         System.out.println(model.testset.toSummaryString());
