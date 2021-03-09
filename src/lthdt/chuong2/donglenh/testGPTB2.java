@@ -5,6 +5,8 @@
  */
 package lthdt.chuong2.donglenh;
 
+import lthdt.chuong2.logiclayer.PhuongTrinhBac2;
+
 /**
  *
  * @author Administrator
@@ -20,6 +22,10 @@ package lthdt.chuong2.donglenh;
 public class testGPTB2 {
     public static void main(String[] args) {
         System.out.println("Giai PT Bac 2");
+        PhuongTrinhBac2 obj = new PhuongTrinhBac2(-2, -4, 2);
+        //obj.giaiPhuongTrinh();
+        System.out.println(obj.toString());
+        
         
     }
     

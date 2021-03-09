@@ -46,7 +46,7 @@ public class PhuongTrinhBac2 implements GiaiPTInterface {
                }else{
                    nghiem_x1 = -b + Math.sqrt(delta)/(2*a);
                    nghiem_x2 = -b - Math.sqrt(delta)/(2*a);
-                   Ketqua = "phuong trinh cos 2 nghiem phan biet: "+ nghiem_x1 + "; va x2 " + nghiem_x2;
+                   Ketqua = "phuong trinh co 2 nghiem phan biet: "+ nghiem_x1 + "; va x2 " + nghiem_x2;
                }
            }
                    
@@ -68,6 +68,54 @@ public class PhuongTrinhBac2 implements GiaiPTInterface {
            giaiPhuongTrinh();
        }
        return Ketqua;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    public void setC(double c) {
+        this.c = c;
+    }
+
+    public double getNghiem_x1() {
+        return nghiem_x1;
+    }
+
+    public void setNghiem_x1(double nghiem_x1) {
+        this.nghiem_x1 = nghiem_x1;
+    }
+
+    public double getNghiem_x2() {
+        return nghiem_x2;
+    }
+
+    public void setNghiem_x2(double nghiem_x2) {
+        this.nghiem_x2 = nghiem_x2;
+    }
+
+    public String getKetqua() {
+        return Ketqua;
+    }
+
+    public void setKetqua(String Ketqua) {
+        this.Ketqua = Ketqua;
     }
     
     
