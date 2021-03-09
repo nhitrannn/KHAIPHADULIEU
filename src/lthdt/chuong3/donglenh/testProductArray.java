@@ -26,6 +26,7 @@ public class testProductArray {
         {
             new Product("Sunsilk", 12),
             new Product("Lifebouy", 5),
+            new Product("Sunsilk", 8),
             new  Product("Khan Giay", 2),
             new Product("but chi", 3)
         
@@ -47,12 +48,22 @@ public class testProductArray {
 //                    
 //                }
                 //sap xep mang theo gia ca tang dan
-                Arrays.sort(sp, new ProductCompByPrice());
-                System.out.println("Mang sap xep tang dan theo gia ca: ");
-                System.out.println(Arrays.toString(sp));
+//                Arrays.sort(sp, new ProductCompByPrice());
+//                System.out.println("Mang sap xep tang dan theo gia ca: ");
+//                System.out.println(Arrays.toString(sp));
                 System.out.println("Sap xep san pham theo ten:");
                 Arrays.sort(sp, new productCompByName());
                 System.out.println(Arrays.toString(sp));
+                
+                int index = Arrays.binarySearch(sp, new Product("Sunsilk", 12), new productCompByName());
+                if(index < 0){
+                    System.out.println("Khong tim thay");
+                }else{
+                    System.out.println("Phan tu thu " + index + " chua gia tri can tim");
+                    System.out.println(sp[index]);
+                    
+        
+    }
                 
                 
             }
