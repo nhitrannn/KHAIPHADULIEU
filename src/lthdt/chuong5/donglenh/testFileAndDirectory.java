@@ -5,6 +5,7 @@
  */
 package lthdt.chuong5.donglenh;
 
+import java.io.File;
 import lthdt.chuong5.logic.FileAndDirectoryOperations;
 
 /**
@@ -19,6 +20,17 @@ public class testFileAndDirectory {
     public static void main(String[] args) {
         // TODO code application logic here
         FileAndDirectoryOperations fo = new FileAndDirectoryOperations();
+//        File[] content = fo.getDirectoryContent("D:\\SV3\\tiktok");
+        
+        //System.out.println(fo.displayContent(content));
+//        File[] thumuc = fo.getSubDirectories(content);
+//        System.out.println("Danh sach cac thu muc con la: ");
+//        System.out.println(fo.displayContent(thumuc));
+//        File[] taptin = fo.getFiles(content);
+//        System.out.println("Danh sach cac tap tin la: ");
+//        System.out.println(fo.displayContent(taptin));
+            fo.getContentRecursively("D:\\SV3");
+        
         
     }
     
