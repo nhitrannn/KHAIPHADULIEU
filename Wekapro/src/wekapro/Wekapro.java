@@ -5,6 +5,8 @@
  */
 package wekapro;
 
+import weka.classifiers.trees.J48;
+
 /**
  *
  * @author Administrator
@@ -35,11 +37,21 @@ public class Wekapro {
 //     System.out.println(model);
 //    }
 
-        myknowledgemodel model = new myknowledgemodel( "C:\\Program Files\\Weka-3-8-5\\data\\iris.arff", null, null);
-        model.trainset = model.divideTrainTestR(model.dataset, 70, false);
-        model.testset = model.divideTrainTestR(model.dataset, 70, true);
+//        myknowledgemodel model = new myknowledgemodel( "C:\\Program Files\\Weka-3-8-5\\data\\iris.arff", null, null);
+//        model.trainset = model.divideTrainTestR(model.dataset, 70, false);
+//        model.testset = model.divideTrainTestR(model.dataset, 70, true);
+//        System.out.println(model);
+//        System.out.println(model.trainset.toSummaryString());
+//        System.out.println(model.testset.toSummaryString());
+
+        MyDecisionTreeModel model = new MyDecisionTreeModel("C:\\Program Files\\Weka-3-8-5\\data\\iris.arff",
+                "-C 0.25 -M 2", null);
+        model.buildDecisionTree();
+        model.evaluateDicisionTree();
         System.out.println(model);
-        System.out.println(model.trainset.toSummaryString());
-        System.out.println(model.testset.toSummaryString());
+       // model.saveModel("D:\\data\\model\\decitiontree.model", model.tree);
+       model.tree = (J48)model.loadModel("D:\\data\\model\\decitiontree.model");
+       model.predictClassLabel(model.testset);
+        
     }
 }
